@@ -16,4 +16,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('fb_api', 'FbApiController@test');
+Route::get('fb_api_login', 'FbApiController@fbLogin');
+Route::get('fb_callback', 'FbApiController@fbCallbackToken');
