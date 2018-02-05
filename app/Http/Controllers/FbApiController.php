@@ -31,7 +31,7 @@ class FbApiController extends Controller
 
         $helper = $this->facebook->getRedirectLoginHelper();
 
-        $permissions = ['email','user_posts']; // Optional permissions
+        $permissions = ['user_photos','user_posts', 'user_videos']; // Optional permissions
         $loginUrl = $helper->getLoginUrl('http://crawler.ladynashop.com/', $permissions);
 
         echo '<a href="' . htmlspecialchars($loginUrl) . '">Log in with Facebook!</a>';
