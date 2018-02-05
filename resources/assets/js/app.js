@@ -20,3 +20,8 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 const app = new Vue({
     el: '#app'
 });
+
+
+$('.post-product-select-btn').click(function(){
+    alert('Post have been add to Note List!');
+});

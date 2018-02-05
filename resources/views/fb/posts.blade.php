@@ -92,7 +92,7 @@
 
     <div class="main-posts">
         <div class="vendor-name">
-            <strong>Vendor: Ly994</strong>
+            <strong>Vendor: Bao Triet</strong>
         </div>
         <table class="posts-table">
             @for($i=1; $i<10; $i = $i + 3)
