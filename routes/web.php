@@ -19,4 +19,5 @@ Route::get('/', function () {
 Route::get('fb_api_login', 'FbApiController@fbLogin');
 Route::get('fb_callback', 'FbApiController@fbCallbackToken');
 Route::get('fb_get_post', 'FbApiController@getPost');
+Route::get('fb_posts', 'FbApiController@postList');
 Route::get('privacy', 'PrivacyController@showPrivacy');

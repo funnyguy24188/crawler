@@ -32,7 +32,7 @@ class FbApiController extends Controller
         $helper = $this->facebook->getRedirectLoginHelper();
 
         $permissions = ['email','user_posts']; // Optional permissions
-        $loginUrl = $helper->getLoginUrl('http://spgcrawler.dev/fb_callback', $permissions);
+        $loginUrl = $helper->getLoginUrl('http://crawler.ladynashop.com/fb_callback', $permissions);
 
         echo '<a href="' . htmlspecialchars($loginUrl) . '">Log in with Facebook!</a>';
     }
@@ -41,6 +41,7 @@ class FbApiController extends Controller
     {
 
         $helper = $this->facebook->getRedirectLoginHelper();
+
         if (isset($_GET['state'])) {
             $helper->getPersistentDataHandler()->set('state', $_GET['state']);
         }
@@ -123,9 +124,10 @@ class FbApiController extends Controller
                 echo 'Facebook SDK returned an error: ' . $e->getMessage();
                 exit;
             }
-        $grapthList = $response->getGraphEdge();
-          var_dump($grapthList->getTotalCount());die;
       //  }
 
+    }
+    public function postList() {
+        return view('fb.posts');
     }
 }
