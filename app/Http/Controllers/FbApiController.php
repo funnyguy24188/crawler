@@ -26,15 +26,10 @@ class FbApiController extends Controller
         ]);
     }
 
-    public function fbLogin()
-    {
-
-        $helper = $this->facebook->getRedirectLoginHelper();
-
-        $permissions = ['user_photos','user_posts', 'user_videos']; // Optional permissions
-        $loginUrl = $helper->getLoginUrl('http://crawler.ladynashop.com/fb_posts', $permissions);
-
-        echo '<a href="' . htmlspecialchars($loginUrl) . '">Log in with Facebook!</a>';
+    public function welcome() {
+        return view('fb.welcome', [
+            'facebook'=> $this->facebook
+        ]);
     }
 
     public function fbCallbackToken(Request $request)

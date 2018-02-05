@@ -11,11 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-
+Route::get('/', 'FbApiController@welcome');
 Route::get('fb_api_login', 'FbApiController@fbLogin');
 Route::get('fb_callback', 'FbApiController@fbCallbackToken');
 Route::get('fb_get_post', 'FbApiController@getPost');
